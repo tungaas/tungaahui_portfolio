@@ -1,1 +1,0 @@
-High-resolution portfolio: 35 pages re-rendered from original PDF at 3x (approx 3508 x 2126 px), WebP quality 91. Existing index.html, links, layout and navigation preserved. Upload extracted contents to repository root, replacing existing files.
