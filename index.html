@@ -16,4 +16,93 @@
 </div><p>Research, data visualization, publications, exhibitions and digital experiences.<br/><br/>Explore our selected work below.</p></section><nav class="sections" id="sections" aria-label="Portfolio sections"></nav><section class="viewer" id="works" aria-label="Portfolio pages"></section></main>
 
   
-  <footer><div><div class="footer-brand">TUNGAAHUI<br/>DATA STUDIO</div><p>Independent research and design studio · Ulaanbaatar</p></div><div><p>Explore more</p><a href="https://www.tungaahui.mn/" target="_blank" rel="noopener">Website ↗</a><br/><a href="https://www.instagram.com/tungaahui_data_studio/" target="_blank" rel="noopener">Instagram ↗</a><br/><a href="https://www.facebook.com/tungaahui/" target="_blank" rel="noopener">Facebook ↗</a></div></footer><script type="module" src="/main.js"></script></body></html>
+  <footer><div><div class="footer-brand">TUNGAAHUI<br/>DATA STUDIO</div><p>Independent research and design studio · Ulaanbaatar</p></div><div><p>Explore more</p><a href="https://www.tungaahui.mn/" target="_blank" rel="noopener">Website ↗</a><br/><a href="https://www.instagram.com/tungaahui_data_studio/" target="_blank" rel="noopener">Instagram ↗</a><br/><a href="https://www.facebook.com/tungaahui/" target="_blank" rel="noopener">Facebook ↗</a></div></footer><script type="module" src="/main.js"></script>
+
+
+<style>
+  .portfolio-tools {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 9999;
+  }
+
+  .portfolio-tools button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: #202751;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,.15);
+  }
+
+  .portfolio-tools button:hover {
+    opacity: .8;
+  }
+
+  .portfolio-tools svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+</style>
+
+<div class="portfolio-tools">
+  <button id="fullscreenBtn"
+          aria-label="Toggle full screen"
+          title="Full Screen">
+    <svg viewBox="0 0 24 24">
+      <path d="M8 3H5a2 2 0 0 0-2 2v3
+               M16 3h3a2 2 0 0 1 2 2v3
+               M3 16v3a2 2 0 0 0 2 2h3
+               M21 16v3a2 2 0 0 1-2 2h-3"/>
+    </svg>
+  </button>
+
+  <button id="backToTopBtn"
+          aria-label="Back to top"
+          title="Back to Top">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 19V5 M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  const fullscreenBtn =
+    document.getElementById('fullscreenBtn');
+
+  fullscreenBtn.addEventListener('click', async () => {
+    try {
+      if (!document.fullscreenElement) {
+        await document.documentElement.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    } catch (error) {
+      console.log('Fullscreen unavailable:', error);
+    }
+  });
+
+  document.getElementById('backToTopBtn')
+    .addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+</script>
+
+  
+</body></html>
