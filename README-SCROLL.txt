@@ -1,0 +1,1 @@
+Page-by-page scroll snap version. Each wheel/trackpad scroll settles on one portfolio page. All original PDF pages, hotspots, and hero edits retained. Upload repository files to GitHub, then Vercel redeploys.
